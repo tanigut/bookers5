@@ -36,6 +36,12 @@
 
       </div>
     </header>
+    <div class="text-center">
+    <% if user_signed_in? %>
+    <%= render '/searches/form', users: @users %>
+    <% end %>
+    </div>
+
     <div class="container">
       <p id="notice"><%= notice %></p>
       <%= yield %>
